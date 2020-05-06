@@ -2,7 +2,10 @@ const BattleForEther = artifacts.require("./BattleForEther.sol");
 
 contract("BattleForEther", () => {
   describe("consctructor", () => {
-    it("should store its parameters", async () => {});
+    it("should store its parameters", async () => {
+      const instance = await BattleForEther.new();
+      console.log(instance);
+    });
   });
   describe("join()", () => {
     it("should not able to join defore the game stats", () => {});
