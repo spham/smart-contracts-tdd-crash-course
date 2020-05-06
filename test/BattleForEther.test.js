@@ -4,7 +4,9 @@ contract("BattleForEther", () => {
   describe("consctructor", () => {
     it("should store its parameters", async () => {
       const instance = await BattleForEther.new();
-      console.log(instance);
+
+      assert.equal(await instance.something(), 1000, "wrong something");
+      //console.log(instance)
     });
   });
   describe("join()", () => {
