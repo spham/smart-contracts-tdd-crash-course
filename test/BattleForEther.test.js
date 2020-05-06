@@ -3,7 +3,7 @@ const BattleForEther = artifacts.require("./BattleForEther.sol");
 contract("BattleForEther", () => {
   describe("consctructor", () => {
     it("should store its parameters", async () => {
-      const instance = await BattleForEther.new();
+      const instance = await BattleForEther.new(1000);
 
       assert.equal(await instance.something(), 1000, "wrong something");
       //console.log(instance)
