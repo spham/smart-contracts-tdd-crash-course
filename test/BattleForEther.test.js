@@ -4,8 +4,7 @@ contract("BattleForEther", () => {
   describe("consctructor", () => {
     it("should store its parameters", async () => {
       const startDate = ~~(Date.now()/1000)
-      const startDate = ~~(Date.now()/1000)+60*60
-      const endDate = "";
+      const endDate = ~~(Date.now()/1000)+60*60
       const instance = await BattleForEther.new(startDate, endDate);
 
       assert.equal(await instance.startDate(), startDate, "wrong startDate");

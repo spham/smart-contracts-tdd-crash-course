@@ -1,9 +1,11 @@
 pragma solidity >=0.4.21 <0.7.0;
 
 contract BattleForEther{
-    uint public something;
+    uint public startDate;
+    uint public endDate;
 
-    constructor(uint something_) public {
-        something = something_;
+    constructor(uint startDate_, uint endDate_) public {
+        startDate = startDate_;
+        endDate = endDate_;
     }
 }
