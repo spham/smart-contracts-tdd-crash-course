@@ -3,9 +3,13 @@ const BattleForEther = artifacts.require("./BattleForEther.sol");
 contract("BattleForEther", () => {
   describe("consctructor", () => {
     it("should store its parameters", async () => {
-      const instance = await BattleForEther.new(1000);
+      const startDate = ~~(Date.now()/1000)
+      const startDate = ~~(Date.now()/1000)+60*60
+      const endDate = "";
+      const instance = await BattleForEther.new(startDate, endDate);
 
-      assert.equal(await instance.something(), 1000, "wrong something");
+      assert.equal(await instance.startDate(), startDate, "wrong startDate");
+      assert.equal(await instance.endDate(), endDate, "wrong endDate");
       //console.log(instance)
     });
   });
