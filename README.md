@@ -6,7 +6,7 @@
 ou
 
 - npm install
-- npm test ou
+- npm test
 
 ```
 [
