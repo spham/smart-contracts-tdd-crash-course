@@ -13,7 +13,11 @@ mapping (address=>uint) public balances;
         require(now >= startDate && now <= endDate);
         _;
     }
+
+    event NewPlayer( address player);
+
     function join() public onlyDuringGame {
         balances[msg.sender]= 1000;
+        emit NewPlayer(msg.sender);
     }
 }
