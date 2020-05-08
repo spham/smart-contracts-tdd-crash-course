@@ -8,4 +8,7 @@ contract BattleForEther{
         startDate = startDate_;
         endDate = endDate_;
     }
+    function join() public {
+        revert("");
+    }
 }
