@@ -1,4 +1,4 @@
-![](https://github.com/spham/smart-contracts-tdd-crash-course/actions/hello-world/workflows/TDDTest/badge.svg)
+![](https://github.com/spham/smart-contracts-tdd-crash-course/workflows/TDDTest/badge.svg)
 
 sudo npm install truffle -g --unsafe-perm
 
