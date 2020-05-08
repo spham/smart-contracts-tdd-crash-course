@@ -52,6 +52,9 @@ contract('BattleForEther', (accounts) => {
 
       const { logs } = await instance.join({ from: player1 })
       assert.equal(logs.length, 1, 'no event emoted')
+
+      const event = logs[0]
+      assert.equal(event.event, 'NewPlayer', 'event name is wrong')
     })
   })
 })
