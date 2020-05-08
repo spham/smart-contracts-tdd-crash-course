@@ -17,7 +17,7 @@ mapping (address=>uint) public balances;
     event NewPlayer( address player);
 
     function join() public onlyDuringGame {
-        balances[msg.sender]= 1000;
+        balances[msg.sender] = 1000;
         emit NewPlayer(msg.sender);
     }
 }
