@@ -45,6 +45,13 @@ contract('BattleForEther', (accounts) => {
       )
     })
 
-    it('should emit a newPlayer event', () => {})
+    it('should emit a newPlayer event', () => {
+      const startDate = ~~(Date.now() / 1000) - 60 * 60
+      const endDate = ~~(Date.now() / 1000) + 60 * 60
+      const instance = await BattleForEther.new(startDate, endDate)
+
+      const {logs} = await instance.join({ from: player1 })
+      assert.equal(logs.length,1,"no event emoted")
+    })
   })
 })
