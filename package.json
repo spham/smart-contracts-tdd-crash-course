@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "minimist": "^1.2.5",
     "truffle": "^5.1.24"
   }
 }
