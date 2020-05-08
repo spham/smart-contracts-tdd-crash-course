@@ -55,6 +55,7 @@ contract('BattleForEther', (accounts) => {
 
       const event = logs[0]
       assert.equal(event.event, 'NewPlayer', 'event name is wrong')
+      assert.equal(event.args.player, player1, 'event args is wrong')
     })
   })
 })
